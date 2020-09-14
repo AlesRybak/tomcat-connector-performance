@@ -84,7 +84,7 @@
     <Connector
             port="8444"
             protocol="org.apache.coyote.http11.Http11NioProtocol"
-            sslImplementationName="org.apache.tomcat.util.net.jsse.JSSEImplementation"
+            sslImplementationName="org.apache.tomcat.util.net.openssl.OpenSSLImplementation"
             maxThreads="150" SSLEnabled="true"
             >
         <SSLHostConfig>
