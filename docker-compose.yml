@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "20080:80"
+      - "20443:443"
+
+  tomcat:
+    container_name: tomcat
+    build:
+      context: ./tomcat
+      dockerfile: Dockerfile
+    ports:
+      - "28080:8080"
+      - "28443:8443"
+      - "28444:8444"
+      - "28445:8445"
+
